@@ -1,4 +1,4 @@
-name: MS SQL Server 2014 Instance Security Technical Implementation Guide
+name: cms-ars3.1-high-microsoft-sql-2014-server-stig-overlay
 title: MS SQL Server 2014 Instance Security Technical Implementation Guide
 maintainer: The CMS InSpec Dev Team
 copyright: (c) 2018 The MITRE Corporation
@@ -7,7 +7,7 @@ license: Apache-2.0
 version: 0.1.0
 
 depends:
-- name: windows_2012r2_memberserver_stig_baselinee
+- name: microsoft-sql-2014-server-stig-baseline
   git: https://github.com/mitre/microsoft-sql-2014-server-stig-baseline.git
   branch: master
 
