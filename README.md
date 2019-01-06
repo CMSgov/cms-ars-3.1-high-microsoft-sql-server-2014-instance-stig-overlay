@@ -1,12 +1,12 @@
 # cms-ars-3.1-high-microsoft-sql-2014-server-stig-overlay
 
-CMS ARS 3.1 Overlay InSpec Validation Profile for the Microsoft Windows 2012r2 Member Server DISA STIG Benchmark.
+CMS ARS 3.1 Overlay InSpec Validation Profile for the Microsoft SQL 2014 Server DISA STIG Benchmark.
 
-This InSpec Profile is based on the Microsoft Windows 2012r2 Member Server DISA STIG.
+This InSpec Profile is based on the Microsoft SQL 2014 Server DISA STIG baseline profile.
 
 ## Description
 
-This [InSpec](https://github.com/chef/inspec) compliance profile validates the security settings in the Microsoft Windows 2012r2 Member Server DISA STIG in an automated way. The values of the security settings conform to CMS ARS 3.1.
+This [InSpec](https://github.com/chef/inspec) compliance profile validates the security settings in the Microsoft SQL 2014 Server DISA STIG in an automated way. The values of the security settings conform to CMS ARS 3.1.
 
 InSpec is an open-source run-time framework and rule language used to specify compliance, security, and policy requirements for testing any node in your infrastructure.
 
