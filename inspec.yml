@@ -4,6 +4,7 @@ maintainer: The CMS InSpec Dev Team
 copyright: (c) 2018 The MITRE Corporation
 copyright_email: inspec@mitre.org
 license: Apache-2.0
+summary: CMS ARS 3.1 overlay for MS SQL Server 2014 DISA STIG.
 version: 0.1.0
 
 depends:
