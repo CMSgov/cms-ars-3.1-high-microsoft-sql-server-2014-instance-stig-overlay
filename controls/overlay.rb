@@ -1,5 +1,5 @@
 # encoding: utf-8                                                                                              
-include_controls 'microsoft-sql-2014-server-stig-baseline' do
+include_controls 'microsoft-sql-server-2014-instance-stig-baseline' do
   control 'V-67893' do
     title 'SQL Server, the operating system, or the storage system must provide a 
           warning to appropriate support staff when allocated audit record storage 
@@ -162,11 +162,11 @@ include_controls 'microsoft-sql-2014-server-stig-baseline' do
     tag "nist": ['CM-5', 'Rev_4']
   end
 
-  control 'V-67877' do
-    impact 'none'
-    desc 'caveat', 'Not applicable for this CMS ARS 3.1 overlay, since the related 
-         security control is not included in CMS ARS 3.1'
-  end
+#  control 'V-67877' do
+#    impact 'none'
+#    desc 'caveat', 'Not applicable for this CMS ARS 3.1 overlay, since the related 
+#         security control is not included in CMS ARS 3.1'
+#  end
 
   control 'V-67899' do
     tag 'cci': ['CCI-001807']
@@ -204,35 +204,32 @@ include_controls 'microsoft-sql-2014-server-stig-baseline' do
          security control is not incluced in the CMS ARS 3.1'
   end
 
-  #??????????????????????
-  control 'V-67943' do
-    title 'If SQL Server authentication, using passwords, is employed, SQL Server 
-          must enforce the CMS standards for password complexity.'
-    desc 'check', 'Windows domain/enterprise authentication and identification must be 
-         used (STIG ID SQL4-00-030300).  Native SQL Server authentication may be used 
-         only when circumstances make it unavoidable; and must be documented and AO-approved.
+#  control 'V-67943' do
+#    title 'If SQL Server authentication, using passwords, is employed, SQL Server 
+#          must enforce the CMS standards for password complexity.'
+#    desc 'check', 'Windows domain/enterprise authentication and identification must be 
+#         used (STIG ID SQL4-00-030300).  Native SQL Server authentication may be used 
+#         only when circumstances make it unavoidable; and must be documented and AO-approved.
 
-         The CMS standard for authentication is CMS-approved PKI certificates.  Authentication 
-         based on User ID and Password may be used only when it is not possible to employ a 
-         PKI certificate, and requires AO approval.
+#         The CMS standard for authentication is CMS-approved PKI certificates.  Authentication 
+#         based on User ID and Password may be used only when it is not possible to employ a 
+#         PKI certificate, and requires AO approval.
 
-         In such cases, the CMS standards for password complexity must be implemented.  
+#         In such cases, the CMS standards for password complexity must be implemented.  
 
-         The requirements for password complexity are:
-         a. minimum of 15 Characters, 3 of each of the following character sets:
-         - Upper-case
-         - Lower-case
-         - Numeric
-         - Special characters (e.g. ~ ! @ # $ % ^ & * ( ) _ + = - \' [ ] / ? > <)];
-         b. Minimum number of characters changed from previous password:  80% of the minimum 
-         password length (that is, 12).
+#         The requirements for password complexity are:
+#         a. minimum of 15 Characters, 3 of each of the following character sets:
+#         - Upper-case
+#         - Lower-case
+#         - Numeric
+#         - Special characters (e.g. ~ ! @ # $ % ^ & * ( ) _ + = - \' [ ] / ? > <)];
+#         b. Minimum number of characters changed from previous password:  80% of the minimum 
+#         password length (that is, 12).
          
-         To enforce this in SQL Server, configure each DBMS-managed login to inherit the 
-         rules from Windows.'
-    
-  end
+#         To enforce this in SQL Server, configure each DBMS-managed login to inherit the 
+#         rules from Windows.'   
+#  end
 
-  #????????????????????????
   control 'V-67945' do
     title 'If SQL Server authentication, using passwords, is employed, SQL Server must enforce 
           the CMS standards for password lifetime.'
