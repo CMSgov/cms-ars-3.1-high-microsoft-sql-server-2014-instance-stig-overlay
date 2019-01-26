@@ -47,7 +47,7 @@ The JSON InSpec results file may also be loaded into a __full heimdall server__,
 ## Special Thanks
 * Alicia Sturtevant
 
-## Contributing and Getting Help
+## Getting Help
 To report a bug or feature request, please open an [issue](https://github.com/ejaronne/readmes/issues/new).
 
 ## License
