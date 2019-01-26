@@ -45,6 +45,7 @@ The JSON InSpec results file may also be loaded into a __full heimdall server__,
 * Danny Haynes
 
 ## Special Thanks
+* Aaron Lippold
 * Alicia Sturtevant
 
 ## Getting Help
