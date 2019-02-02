@@ -9,29 +9,55 @@ __For the best security of the runner, always install on the runner the _latest 
 
 Latest versions and installation options are available at the [InSpec](http://inspec.io/) site.
 
+The following attributes must be configured in an attributes file for the profile to run correctly. More information about InSpec attributes can be found in the [InSpec Profile Documentation](https://www.inspec.io/docs/reference/profiles/).
+
+```
+# Username for MSSQL DB Server
+user: null
+
+# Password for MSSQL DB Server
+password: null
+
+# Hostname for MSSQL DB Server
+host: 'hostname'
+
+# Instance name of the MSSQL DB Server
+instance: 'MSSQL2014'
+
+# Port of MSSQL DB Server
+port: 1433
+
+# Name of the specific database being evaluated within the MSSQL server
+db_name: 'master'
+```
+
 ## Running This Overlay
 When the __"runner"__ host uses this profile overlay for the first time, follow these instructions: 
+
+When the __"runner"__ host uses this profile overlay for the first time, follow these steps: 
 
 ```
 mkdir profiles
 cd profiles
 git clone https://github.cms.gov/ispg-dev/cms-ars-3.1-high-microsoft-sql-server-2014-instance-stig-overlay.git
-git clone https://github.com/mitre/microsoft-sql-server-2014-instance-stig-baseline.git
+git clone https://github.com/mitre/cms-ars-3.1-high-microsoft-sql-server-2014-instance-stig-overlay.git
 cd cms-ars-3.1-high-microsoft-sql-server-2014-instance-stig-overlay
 bundle install
-inspec exec ../cms-ars-3.1-high-microsoft-sql-server-2014-instance-stig-overlay -t winrm://$winhostip --user 'Administrator' --password=Pa55w0rd --reporter cli json:mssql-instance-overlay-results.json
+cd ..
+inspec exec cms-ars-3.1-high-microsoft-sql-server-2014-instance-stig-overlay --target=winrm://<your_target_host_name_or_ip_address> --user=<target_account_with_administrative_privileges> --password=<password_for_target_account> --reporter=cli json:<path_to_your_output_file/name_of_your_output_file.json> 
 ```
 
-For every successive run, follow these instructions to always have the latest version:
+For every successive run, follow these steps to always have the latest version of this overlay and dependent profiles:
 
 ```
 cd profiles/cms-ars-3.1-high-microsoft-sql-server-2014-instance-stig-overlay
 git pull
-cd ../microsoft-sql-server-2014-instance-stig-baseline
+cd ../cms-ars-3.1-high-microsoft-sql-server-2014-instance-stig-overlay
 git pull
 cd ../cms-ars-3.1-high-microsoft-sql-server-2014-instance-stig-overlay
 bundle install
-inspec exec ../cms-ars-3.1-high-microsoft-sql-server-2014-instance-stig-overlay -t winrm://$winhostip --user 'Administrator' --password=Pa55w0rd --reporter cli json:mssql-instance-overlay-results.json
+cd ..
+inspec exec cms-ars-3.1-high-microsoft-sql-server-2014-instance-stig-overlay --target=winrm://<your_target_host_name_or_ip_address> --user=<target_account_with_administrative_privileges> --password=<password_for_target_account> --reporter=cli json:<path_to_your_output_file/name_of_your_output_file.json> 
 ```
 
 ## Viewing the JSON Results
