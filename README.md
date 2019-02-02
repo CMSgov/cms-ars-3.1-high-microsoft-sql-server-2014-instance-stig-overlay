@@ -32,8 +32,6 @@ db_name: 'master'
 ```
 
 ## Running This Overlay
-When the __"runner"__ host uses this profile overlay for the first time, follow these instructions: 
-
 When the __"runner"__ host uses this profile overlay for the first time, follow these steps: 
 
 ```
