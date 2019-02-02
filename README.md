@@ -38,7 +38,7 @@ When the __"runner"__ host uses this profile overlay for the first time, follow 
 mkdir profiles
 cd profiles
 git clone https://github.cms.gov/ispg-dev/cms-ars-3.1-high-microsoft-sql-server-2014-instance-stig-overlay.git
-git clone https://github.com/mitre/cms-ars-3.1-high-microsoft-sql-server-2014-instance-stig-overlay.git
+git clone https://github.com/mitre/microsoft-sql-server-2014-instance-stig-baseline.git
 cd cms-ars-3.1-high-microsoft-sql-server-2014-instance-stig-overlay
 bundle install
 cd ..
@@ -50,7 +50,7 @@ For every successive run, follow these steps to always have the latest version o
 ```
 cd profiles/cms-ars-3.1-high-microsoft-sql-server-2014-instance-stig-overlay
 git pull
-cd ../cms-ars-3.1-high-microsoft-sql-server-2014-instance-stig-overlay
+cd ../microsoft-sql-server-2014-instance-stig-baseline
 git pull
 cd ../cms-ars-3.1-high-microsoft-sql-server-2014-instance-stig-overlay
 bundle install
