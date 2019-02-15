@@ -9,8 +9,7 @@ version: 0.1.0
 
 depends:
 - name: microsoft-sql-server-2014-instance-stig-baseline
-  git: https://github.com/mitre/stig-microsoft-sql-server-2014-instance-baseline.git
-  branch: master
+  path: ../microsoft-sql-server-2014-instance-stig-baseline
 
 attributes:
   - name: user
