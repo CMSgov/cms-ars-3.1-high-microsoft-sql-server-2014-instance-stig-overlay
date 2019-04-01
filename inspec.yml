@@ -166,7 +166,7 @@ attributes:
             "TCP/IP"]
 
   - name: authorized_ports
-    description: 'LList of authorized network ports for the SQL server'
+    description: 'List of authorized network ports for the SQL server'
     type: array
     default: ["1433"]      
 
