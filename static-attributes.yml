@@ -121,7 +121,6 @@ allowed_server_permissions: []
 #type: array
 allowed_database_permissions: []
 
-
 #description: 'List of Databases that require encryption'
 #type: array
 encrypted_databases: ['database_name']
