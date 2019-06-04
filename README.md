@@ -31,10 +31,10 @@ port: 1433
 db_name: 'master'
 
 # description: 'Set to true If SQL Server Trace is in use for audit purposes'
-server_trace_implemented: true
+server_trace_implemented: false
 
 #   description: 'Set to true If SQL Server Audit is in use for audit purposes'
-server_audit_implemented: true
+server_audit_implemented: false
 
 # description: 'Set to true if SQL Server Reporting Services is in use'
   sql_server_reporting_services_used: false
@@ -78,8 +78,8 @@ sql_mgmt_tools_used: false
 # description: 'Set to true if xp_cmdhsell is required'
 sql_mgmt_tools_used: false
 
-# description: 'instance name MSSQL DB Server'
-server_instance: 'WIN-FC4ANINFUFP'
+# description: 'instance name MSSQL DB Server (e.g., ''WIN-FC4ANINFUFP'')'
+server_instance: ''
 
 #description: 'List of users with permissions - ALTER TRACE, CREATE TRACE EVENT NOTIFICATION'
 approved_audit_maintainers: []
@@ -102,16 +102,14 @@ approved_users_database: []
 # description: 'List of sql components installed'
 sql_components: []
 
-#  description: 'List of authorized network protocols for the SQL server'
-authorized_protocols: ["Shared Memory",
-                       "TCP/IP"]
+#  description: 'List of authorized network protocols for the SQL server (e.g., [''Shared Memory'', ''TCP/IP''])'
+authorized_protocols: []
 
-# description: 'List of authorized network ports for the SQL server'
-authorized_ports: ["1433"]      
+# description: 'List of authorized network ports for the SQL server (e.g., [''1433'']').
+authorized_ports: []      
 
-# description: 'List of authorized network port names for the SQL server'
-authorized_ports_name: ["TcpPort",
-                        "TcpDynamicPorts"]  
+# description: 'List of authorized network port names for the SQL server (e.g., [''TcpPort'', ''TcpDynamicPorts''])'
+authorized_ports_name: []  
 
 # description: 'List of authorized users for the SQL server'
 authorized_sql_users: []
