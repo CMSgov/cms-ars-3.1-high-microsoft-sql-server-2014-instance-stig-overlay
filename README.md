@@ -201,6 +201,7 @@ The JSON InSpec results file may also be loaded into a __[full heimdall server](
 ## Special Thanks
 * Aaron Lippold - [aaronlippold](https://github.com/aaronlippold)
 * Alicia Sturtevant - [asturtevant](https://github.com/asturtevant)
+* Shivani Karikar - [karikarshivani](https://github.com/karikarshivani)
 
 ## Contributing and Getting Help
 To report a bug or feature request, please open an [issue](https://github.com/CMSgov/cms-ars-3.1-high-microsoft-sql-server-2014-instance-stig-overlay/issues/new).
