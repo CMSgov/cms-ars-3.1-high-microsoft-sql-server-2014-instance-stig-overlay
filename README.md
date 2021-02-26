@@ -9,192 +9,210 @@ __For the best security of the runner, always install on the runner the _latest 
 
 Latest versions and installation options are available at the [InSpec](http://inspec.io/) site.
 
-Git is required to download the latest InSpec profiles using the instructions below. Git can be downloaded from the [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) site. 
-
-The following attributes must be configured in an attributes file for the profile to run correctly. More information about InSpec attributes can be found in the [InSpec Profile Documentation](https://www.inspec.io/docs/reference/profiles/).
+## Tailoring to Your Environment
+The following inputs must be configured in an inputs ".yml" file for the profile to run correctly for your specific environment. More information about InSpec inputs can be found in the [InSpec Profile Documentation](https://www.inspec.io/docs/reference/profiles/).
 
 ```
-# Username for MSSQL DB Server
+# Description: Username for MSSQL DB Server
 user: null
 
-# Password for MSSQL DB Server
+# Description: Password for MSSQL DB Server
 password: null
 
-# Hostname for MSSQL DB Server
+# Description: Hostname for MSSQL DB Server
 host: 'hostname'
 
-# Instance name of the MSSQL DB Server
+# Description: Instance name of the MSSQL DB Server
 instance: 'MSSQL2014'
 
-# Port of MSSQL DB Server
+# Description: Port of MSSQL DB Server
 port: 1433
 
-# Name of the specific database being evaluated within the MSSQL server
+# Description: Name of the specific database being evaluated within the MSSQL server
 db_name: 'master'
 
-# description: 'Set to true If SQL Server Trace is in use for audit purposes'
+# Description: 'Set to true If SQL Server Trace is in use for audit purposes'
 server_trace_implemented: false
 
-#   description: 'Set to true If SQL Server Audit is in use for audit purposes'
+# Description: 'Set to true If SQL Server Audit is in use for audit purposes'
 server_audit_implemented: false
 
-# description: 'Set to true if SQL Server Reporting Services is in use'
-  sql_server_reporting_services_used: false
+# Description: 'Set to true if SQL Server Reporting Services is in use'
+sql_server_reporting_services_used: false
 
-# description: 'Set to true if SQL Server data tools is required'
+# Description: 'Set to true if SQL Server data tools is required'
 sql_server_data_tools_required: false
 
-# description: 'Set to true if SQL Server Integration Services is in use'
+# Description: 'Set to true if SQL Server Integration Services is in use'
 sql_server_integration_services_used: false
 
-# description: 'Set to true if SQL Server analysis Services is in use'
+# Description: 'Set to true if SQL Server analysis Services is in use'
 sql_server_analysis_services_used: false
 
-# description: 'Set to true if SQL Server Distributed Replay Client is in use'
+# Description: 'Set to true if SQL Server Distributed Replay Client is in use'
 sql_server_distributed_replay_client_used: false
 
-# description: 'Set to true if SQL Server Distributed Replay Controller is in use'
+# Description: 'Set to true if SQL Server Distributed Replay Controller is in use'
 sql_server_distributed_replay_controller_used: false
 
-# description: 'Set to true if SQL Server full-text search is in use'
+# Description: 'Set to true if SQL Server full-text search is in use'
 sql_server_full_text_search_used: false
 
-# description: 'Set to true if master data services is in use'
+# Description: 'Set to true if master data services is in use'
 master_data_services_used: false
 
-# description: 'Set to true if data quality client is in use'
+# Description: 'Set to true if data quality client is in use'
 data_quality_client_used: false
 
-# description: 'Set to true if data quality services is in use'
+# Description: 'Set to true if data quality services is in use'
 data_quality_services_used: false
 
-# description: 'Set to true if data quality services is in use'
+# Description: 'Set to true if data quality services is in use'
 data_quality_services_used: false
 
-# description: 'Set to true if client tools sdk is in use'
+# Description: 'Set to true if client tools sdk is in use'
 client_tools_sdk_used: false
 
-# description: 'Set to true if sql server management tools is in use'
+# Description: 'Set to true if sql server management tools is in use'
 sql_mgmt_tools_used: false
 
-# description: 'Set to true if xp_cmdhsell is required'
+# Description: 'Set to true if xp_cmdhsell is required'
 sql_mgmt_tools_used: false
 
-# description: 'instance name MSSQL DB Server (e.g., ''WIN-FC4ANINFUFP'')'
+# Description: 'instance name MSSQL DB Server (e.g., ''WIN-FC4ANINFUFP'')'
 server_instance: ''
 
-#description: 'List of users with permissions - ALTER TRACE, CREATE TRACE EVENT NOTIFICATION'
+#Description: 'List of users with permissions - ALTER TRACE, CREATE TRACE EVENT NOTIFICATION'
 approved_audit_maintainers: []
 
-# description: 'List of users with audit permissions - ALTER ANY SERVER AUDIT, CONTROL SERVER, ALTER ANY DATABASE, CREATE ANY DATABASE'
+# Description: 'List of users with audit permissions - ALTER ANY SERVER AUDIT, CONTROL SERVER, ALTER ANY DATABASE, CREATE ANY DATABASE'
 allowed_audit_permissions: []
 
-# description: 'List of user with permissions -  ALTER ANY SERVER AUDIT, ALTER ANYDATABASE AUDIT, ALTER TRACE; or EXECUTE'
+# Description: 'List of user with permissions -  ALTER ANY SERVER AUDIT, ALTER ANYDATABASE AUDIT, ALTER TRACE; or EXECUTE'
 allowed_sql_alter_permissions: []
 
-# description: 'List of approved users with access to SQL Server Audits'
+# Description: 'List of approved users with access to SQL Server Audits'
 approved_users_sql_audits: []
 
-# description: 'List of sql server users with permissions - alter, create, control'
+# Description: 'List of sql server users with permissions - alter, create, control'
 approved_users_server: []
 
-# description: 'List of sql database users with permissions - alter, create, control'
+# Description: 'List of sql database users with permissions - alter, create, control'
 approved_users_database: []
 
-# description: 'List of sql components installed'
+# Description: 'List of sql components installed'
 sql_components: []
 
-#  description: 'List of authorized network protocols for the SQL server (e.g., [''Shared Memory'', ''TCP/IP''])'
+#  Description: 'List of authorized network protocols for the SQL server (e.g., [''Shared Memory'', ''TCP/IP''])'
 authorized_protocols: []
 
-# description: 'List of authorized network ports for the SQL server (e.g., [''1433'']').
+# Description: 'List of authorized network ports for the SQL server (e.g., [''1433'']').
 authorized_ports: []      
 
-# description: 'List of authorized network port names for the SQL server (e.g., [''TcpPort'', ''TcpDynamicPorts''])'
+# Description: 'List of authorized network port names for the SQL server (e.g., [''TcpPort'', ''TcpDynamicPorts''])'
 authorized_ports_name: []  
 
-# description: 'List of authorized users for the SQL server'
+# Description: 'List of authorized users for the SQL server'
 authorized_sql_users: []
 
-# description: 'List of users allowed to execute privileged functions - create, alter, delete'
+# Description: 'List of users allowed to execute privileged functions - create, alter, delete'
 allowed_users_priv_functions: []
 
-# description: 'List of allowed server permissions'
+# Description: 'List of allowed server permissions'
 allowed_server_permissions: []
 
-# description: 'List of allowed database permissions'
+# Description: 'List of allowed database permissions'
 allowed_database_permissions: []
 
-# description: 'List of Databases that require encryption'
+# Description: 'List of Databases that require encryption'
 encrypted_databases: []
 
-# description: 'Set to true if data at rest encryption is required'
+# Description: 'Set to true if data at rest encryption is required'
 data_at_rest_encryption_required: false
 
-# description: 'Set to true if full disk encryption is in place'
+# Description: 'Set to true if full disk encryption is in place'
 full_disk_encryption_inplace: false
 
-# description: 'List of user allowed to execute privileged functions'
+# Description: 'List of user allowed to execute privileged functions'
 allowed_users: []
 
-# description: 'Set to true xp cmdshell is required'
+# Description: 'Set to true xp cmdshell is required'
 is_xp_cmdshell_required: false
 
-# description: 'List of accounts managed by the sql server'
+# Description: 'List of accounts managed by the sql server'
 sql_managed_accounts: []
 
-# description: 'Set to true if filestream is required'
+# Description: 'Set to true if filestream is required'
 filestream_required: false
 
-# description: 'Set to true if filestream transact access is required'
+# Description: 'Set to true if filestream transact access is required'
 filestream_transact_access_only_required: false
 ```
 
-## Running This Overlay
+## Running This Overlay Directly from Github
+
+```
+# How to run
+inspec exec https://github.com/CMSgov/cms-ars-3.1-high-microsoft-sql-server-2014-instance-stig-overlay/archive/master.tar.gz --input-file=<path_to_your_inputs_file/name_of_your_inputs_file.yml> --target=winrm://<your_target_host_name_or_ip_address> --user=<target_account_with_administrative_privileges> --password=<password_for_target_account> --reporter=cli json:<path_to_your_output_file/name_of_your_output_file.json>
+```
+
+### Different Run Options
+
+  [Full exec options](https://docs.chef.io/inspec/cli/#options-3)
+
+## Running This Overlay from a local Archive copy 
+
+If your runner is not always expected to have direct access to GitHub, use the following steps to create an archive bundle of this overlay and all of its dependent tests:
+
+(Git is required to clone the InSpec profile using the instructions below. Git can be downloaded from the [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) site.)
+
 When the __"runner"__ host uses this profile overlay for the first time, follow these steps: 
 
 ```
 mkdir profiles
 cd profiles
 git clone https://github.com/CMSgov/cms-ars-3.1-high-microsoft-sql-server-2014-instance-stig-overlay.git
-git clone https://github.com/mitre/microsoft-sql-server-2014-instance-stig-baseline.git
-cd cms-ars-3.1-high-microsoft-sql-server-2014-instance-stig-overlay
-bundle install
-cd ..
-inspec exec cms-ars-3.1-high-microsoft-sql-server-2014-instance-stig-overlay --attrs=<path_to_your_attributes_file/name_of_your_attributes_file.yml> --target=winrm://<your_target_host_name_or_ip_address> --user=<target_account_with_administrative_privileges> --password=<password_for_target_account> --reporter=cli json:<path_to_your_output_file/name_of_your_output_file.json> 
+inspec archive cms-ars-3.1-high-microsoft-sql-server-2014-instance-stig-overlay
+inspec exec <name of generated archive> --input-file=<path_to_your_inputs_file/name_of_your_inputs_file.yml> --target=winrm://<your_target_host_name_or_ip_address> --user=<target_account_with_administrative_privileges> --password=<password_for_target_account> --reporter=cli json:<path_to_your_output_file/name_of_your_output_file.json>
 ```
 
 For every successive run, follow these steps to always have the latest version of this overlay and dependent profiles:
 
 ```
-cd profiles/microsoft-sql-server-2014-instance-stig-baseline
+cd cms-ars-3.1-high-microsoft-sql-server-2014-instance-stig-overlay
 git pull
-cd ../cms-ars-3.1-high-microsoft-sql-server-2014-instance-stig-overlay
-git pull
-bundle install
 cd ..
-inspec exec cms-ars-3.1-high-microsoft-sql-server-2014-instance-stig-overlay --attrs=<path_to_your_attributes_file/name_of_your_attributes_file.yml> --target=winrm://<your_target_host_name_or_ip_address> --user=<target_account_with_administrative_privileges> --password=<password_for_target_account> --reporter=cli json:<path_to_your_output_file/name_of_your_output_file.json> 
+inspec archive cms-ars-3.1-high-microsoft-sql-server-2014-instance-stig-overlay --overwrite
+inspec exec <name of generated archive> --input-file=<path_to_your_inputs_file/name_of_your_inputs_file.yml> --target=winrm://<your_target_host_name_or_ip_address> --user=<target_account_with_administrative_privileges> --password=<password_for_target_account> --reporter=cli json:<path_to_your_output_file/name_of_your_output_file.json>
 ```
 
-## Viewing the JSON Results
+## Using Heimdall for Viewing the JSON Results
 
-The JSON results output file can be loaded into __[heimdall-lite](https://mitre.github.io/heimdall-lite/)__ for a user-interactive, graphical view of the InSpec results. 
+The JSON results output file can be loaded into __[heimdall-lite](https://heimdall-lite.mitre.org/)__ for a user-interactive, graphical view of the InSpec results. 
 
 The JSON InSpec results file may also be loaded into a __[full heimdall server](https://github.com/mitre/heimdall)__, allowing for additional functionality such as to store and compare multiple profile runs.
 
 ## Authors
-* Eugene Aronne
-* Danny Haynes
+* Eugene Aronne - [ejaronne](https://github.com/ejaronne)
+* Danny Haynes - [djhaynes](https://github.com/djhaynes)
 
 ## Special Thanks
-* Aaron Lippold
-* Alicia Sturtevant
+* Aaron Lippold - [aaronlippold](https://github.com/aaronlippold)
+* Alicia Sturtevant - [asturtevant](https://github.com/asturtevant)
+* Shivani Karikar - [karikarshivani](https://github.com/karikarshivani)
 
-## Getting Help
+## Contributing and Getting Help
 To report a bug or feature request, please open an [issue](https://github.com/CMSgov/cms-ars-3.1-high-microsoft-sql-server-2014-instance-stig-overlay/issues/new).
 
-## License
-This is licensed under the [Apache 2.0](https://www.apache.org/licenses/LICENSE-2.0) license. 
+### NOTICE
+
+© 2018-2020 The MITRE Corporation.
+
+Approved for Public Release; Distribution Unlimited. Case Number 18-3678.
+
+### NOTICE 
+
+MITRE hereby grants express written permission to use, reproduce, distribute, modify, and otherwise leverage this software to the extent permitted by the licensed terms provided in the LICENSE.md file included with this project.
 
 ### NOTICE  
 
@@ -204,5 +222,6 @@ No other use other than that granted to the U. S. Government, or to those acting
 
 For further information, please contact The MITRE Corporation, Contracts Management Office, 7515 Colshire Drive, McLean, VA  22102-7539, (703) 983-6000.
 
-### NOTICE
+### NOTICE 
+
 DISA STIGs are published by DISA IASE, see: https://iase.disa.mil/Pages/privacy_policy.aspx
